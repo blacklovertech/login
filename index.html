@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>login</title>
+   
+</head>
+
+<body>
+  
+<div class="login-box">
+ <center> 
+      <img class="imgPhoto" alt="" src="logo.jpg" width="50%">
+<br>
+    <span style="font-size:30pt;color: blue;font-weight: bold"><b>Retro Tech<b></b></b></span><b><b>
+   </center>
+  <h2>Login</h2>
+  <br>
+  <br>
+  <form>
+    <div class="user-box">
+      <input name="id" type="text" name="" required="">
+      <label>Username</label>
+    </div>
+    <div class="user-box">
+      <input name="pass" type="password" name="" required="">
+      <label>Password</label>
+    </div>
+ 
+    <input type="button" value="Login"   onClick="pasuser(this.form)"   class="a">
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <input type="Reset"  class="a">
+  
+ </form>
+ <br>
+ <div style="padding: 10px;">
+  <span style="font-size:10pt;color: aqua;font-weight: bold; text-align: center; ">
+    <b>For Site  Related Mueries  
+      <a style="text-decoration: none;color: aqua;"
+      href = "https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox?compose=GTvVlcRwRCSlTzGgPCZNbntnnRztbGdKntkQhPhMCZzhQqZPhCpcKfCCgvbPfzbrkBBngMVtwPjWS">
+      Mail Us 
+        </a>
+</b></b></div>
+</div>
+<div  style="  width:100%;  position: fixed;
+bottom: 0;
+right: 0;;color: antiquewhite; font-size: 10px; ">&nbsp;&nbsp;&nbsp;  admin  |  12345 </div>
+
+
+<script language="javascript">
+  function pasuser(form) {
+  if (form.id.value=="admin") { 
+  if (form.pass.value=="12345") {              
+  location="home.html" 
+  } else {
+  alert("Invalid Password")
+  }
+  } else {  
+  alert("Invalid UserID")
+  }
+  }
+  
+  </script>
+  <!--background: linear-gradient(#141e30, #243b55);--->
+
+<style>
+html {
+  height: 100%;
+}
+body {
+  margin:0;
+  padding:0;
+  font-family: sans-serif;
+  background-image: url(bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+}
+.login-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  padding: 40px;
+  transform: translate(-50%, -50%);
+  background: rgba(0,0,0,.5);
+  box-sizing: border-box;
+  box-shadow: 0 15px 25px rgba(0,0,0,.6);
+  border-radius: 10px;
+}
+
+.login-box h2 {
+  margin: 0 0 30px;
+  padding: 0;
+  color: #fff;
+  text-align: center;
+}
+
+.login-box .user-box {
+  position: relative;
+}
+
+.login-box .user-box input {
+  width: 100%;
+  padding: 10px 0;
+  font-size: 16px;
+  color: #fff;
+  margin-bottom: 30px;
+  border: none;
+  border-bottom: 1px solid #fff;
+  outline: none;
+  background: transparent;
+}
+.login-box .user-box label {
+  position: absolute;
+  top:0;
+  left: 0;
+  padding: 10px 0;
+  font-size: 16px;
+  color: #fff;
+  pointer-events: none;
+  transition: .5s;
+}
+
+.login-box .user-box input:focus ~ label,
+.login-box .user-box input:valid ~ label {
+  top: -20px;
+  left: 0;
+  color: #03e9f4;
+  font-size: 12px;
+}
+.a {
+  background:none;
+  border-width: 0ch;
+}
+.login-box form .a {
+  position: relative;
+  display: inline-block;
+  padding: 10px 20px;
+  color: #03e9f4;
+  font-size: 16px;
+  text-decoration: none;
+  text-transform: uppercase;
+  overflow: hidden;
+  transition: .5s;
+  
+  letter-spacing: 4px
+}
+
+.login-box .a:hover {
+  background: #03e9f4;
+  color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 5px #03e9f4,
+              0 0 25px #03e9f4,
+              0 0 50px #03e9f4,
+              0 0 100px #03e9f4;
+}
+
+.login-box .a span {
+  position: absolute;
+  display: block;
+}
+
+.login-box .a span:nth-child(1) {
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #03e9f4);
+  animation: btn-anim1 1s linear infinite;
+}
+
+@keyframes btn-anim1 {
+  0% {
+    left: -100%;
+  }
+  50%,100% {
+    left: 100%;
+  }
+}
+
+.login-box .a span:nth-child(2) {
+  top: -100%;
+  right: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(180deg, transparent, #03e9f4);
+  animation: btn-anim2 1s linear infinite;
+  animation-delay: .25s
+}
+
+@keyframes btn-anim2 {
+  0% {
+    top: -100%;
+  }
+  50%,100% {
+    top: 100%;
+  }
+}
+
+.login-box .a span:nth-child(3) {
+  bottom: 0;
+  right: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(270deg, transparent, #03e9f4);
+  animation: btn-anim3 1s linear infinite;
+  animation-delay: .5s
+}
+
+@keyframes btn-anim3 {
+  0% {
+    right: -100%;
+  }
+  50%,100% {
+    right: 100%;
+  }
+}
+
+.login-box .a span:nth-child(4) {
+  bottom: -100%;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(360deg, transparent, #03e9f4);
+  animation: btn-anim4 1s linear infinite;
+  animation-delay: .75s
+}
+
+@keyframes btn-anim4 {
+  0% {
+    bottom: -100%;
+  }
+  50%,100% {
+    bottom: 100%;
+  }
+}</style>
+
+  </body>
+
+</html>
